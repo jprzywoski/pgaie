@@ -85,8 +85,11 @@ Now you can build code like this (second example from 'Getting started'):
 f) Build Luabind
 1. Open new windows command prompt and go to luabind-0.9.1 directory
 2. Export required variables:
+
 set BOOST_ROOT="C:\Devtools\boost\include\boost-1_57"
+
 set LUA_PATH=C:\TDM-GCC-32
+
 3. Build luabind with:
 bjam stage toolset=gcc release
 4. Copy the following files or folders into TDM-GCC-32 directory:
