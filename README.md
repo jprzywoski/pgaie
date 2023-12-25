@@ -37,8 +37,7 @@ Download location: https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Inst
 2. (Optional) Add 'OpenMP' during install to get easy multithreading support
 3. After install go to C:\TDM-GCC-32\bin and make copies of those two files 
 (select the file, press CTRL+C and then CTRL+V):
-mingw32-make
-gdb32
+mingw32-make and gdb32
 4. Rename copies to simply 'make' and 'gdb' respectively.
 
 c) Compile Lua 5.1 (lua-5.1.5.tar)
@@ -46,6 +45,7 @@ Download location: https://www.lua.org/versions.html#5.1
 1. Unpack the archive, open the folder with 'Git Bash Here' (by right clicking)
 2. Compile with 'make mingw local'
 3. Copy the following files or folder contents into TDM-GCC-32 directory:
+
 Source						Destination
 lua-5.1.5\lib\liblua.a		TDM-GCC-32\lib
 lua-5.1.5\bin				TDM-GCC-32\bin
@@ -71,10 +71,13 @@ f) Compile and install boost 1.57
 5. (Optional) This will expose boost headers and make linking simpler, but will also
 shadow all other versions of boost on your machine.
 Copy the following files or folders into TDM-GCC-32 directory:
+
 Source										Destination
 C:\Devtools\boost\include\boost-1_57\boost	TDM-GCC-32\include
 C:\Devtools\boost\lib						TDM-GCC-32\lib
+
 Now you can build code like this (second example from 'Getting started'):
+
 g++ main.cpp -lboost_regex-mgw51-mt-1_57
 
 f) Build Luabind
@@ -85,6 +88,7 @@ set LUA_PATH=C:\TDM-GCC-32
 3. Build luabind with:
 bjam stage toolset=gcc release
 4. Copy the following files or folders into TDM-GCC-32 directory:
+
 Source									Destination
 luabind-0.9.1\luabind					TDM-GCC-32\include
 luabind-0.9.1\stage\libluabind.dll.a	TDM-GCC-32\lib
@@ -107,3 +111,4 @@ h) Code editor recommendations:
 2. Qt Creator (3.6.1 works fine with this setup)
 3. Eclipse Cevelop
 4. Notepad++
+
