@@ -46,11 +46,11 @@ Download location: https://www.lua.org/versions.html#5.1
 2. Compile with 'make mingw local'
 3. Copy the following files or folder contents into TDM-GCC-32 directory:
 
-Source						Destination
-lua-5.1.5\lib\liblua.a		TDM-GCC-32\lib
-lua-5.1.5\bin				TDM-GCC-32\bin
-lua-5.1.5\src\lua51.dll		TDM-GCC-32\bin
-lua-5.1.5\include 			TDM-GCC-32\include
+	Source						Destination
+	lua-5.1.5\lib\liblua.a		TDM-GCC-32\lib
+	lua-5.1.5\bin				TDM-GCC-32\bin
+	lua-5.1.5\src\lua51.dll		TDM-GCC-32\bin
+	lua-5.1.5\include 			TDM-GCC-32\include
 
 d) Download boost 1.57 and unpack files somewhere (say C:\Devtools)
 Download location: https://www.boost.org/users/history/version_1_57_0.html
@@ -72,13 +72,13 @@ f) Compile and install boost 1.57
 shadow all other versions of boost on your machine.
 Copy the following files or folders into TDM-GCC-32 directory:
 
-Source										Destination
-C:\Devtools\boost\include\boost-1_57\boost	TDM-GCC-32\include
-C:\Devtools\boost\lib						TDM-GCC-32\lib
+	Source										Destination
+	C:\Devtools\boost\include\boost-1_57\boost	TDM-GCC-32\include
+	C:\Devtools\boost\lib						TDM-GCC-32\lib
 
 Now you can build code like this (second example from 'Getting started'):
 
-g++ main.cpp -lboost_regex-mgw51-mt-1_57
+	$ g++ main.cpp -lboost_regex-mgw51-mt-1_57
 
 f) Build Luabind
 1. Open new windows command prompt and go to luabind-0.9.1 directory
@@ -89,19 +89,19 @@ set LUA_PATH=C:\TDM-GCC-32
 bjam stage toolset=gcc release
 4. Copy the following files or folders into TDM-GCC-32 directory:
 
-Source									Destination
-luabind-0.9.1\luabind					TDM-GCC-32\include
-luabind-0.9.1\stage\libluabind.dll.a	TDM-GCC-32\lib
-luabind-0.9.1\stage\libluabind.dll		TDM-GCC-32\bin
+	Source									Destination
+	luabind-0.9.1\luabind					TDM-GCC-32\include
+	luabind-0.9.1\stage\libluabind.dll.a	TDM-GCC-32\lib
+	luabind-0.9.1\stage\libluabind.dll		TDM-GCC-32\bin
 
 g) Now you can build any project by executing 'make' in Git Bash terminal.
 
-MINGW64 /PGAIE/Buckland_Chapter3-Steering Behaviors
-$ make
-Building main.o
-...
-Building all
-g++ ... -o Steering.exe
+	MINGW64 /PGAIE/Buckland_Chapter3-Steering Behaviors
+	$ make
+	Building main.o
+	...
+	Building all
+	g++ ... -o Steering.exe
 
 Note. Run compiled applications in windows command prompt or just double click them to run.
 Don't use Git terminal.
